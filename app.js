@@ -18,7 +18,7 @@ function App() {
   const [tab, setTab] = useState("chat");
   const [language, setLanguage] = useState("English");
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hello! I'm your personal TM6 chef 👨‍🍳 Ask me for any recipe, upload a fridge photo, or browse your saved cookbook!" }
+    { role: "assistant", content: "Hello! I'm your personal Thermomix chef 👨‍🍳 Ask me for any recipe, upload a fridge photo, or browse your saved cookbook!" }
   ]);
   const [recipe, setRecipe] = useState(null);
   const [input, setInput] = useState("");
@@ -114,9 +114,9 @@ function App() {
 
     const currentRecipe = recipe ? "\n\nCurrent recipe on screen: " + JSON.stringify(recipe) : "";
 
-    const prompt = "You are an expert Thermomix TM6 cooking assistant with a warm, friendly personality.\n" +
+    const prompt = "You are an expert Thermomix cooking assistant with a warm, friendly personality.\n" +
       "IMPORTANT: You must respond ENTIRELY in " + language + ". Every word — the message, recipe name, description, ingredients, steps, and tip — must be in " + language + ".\n" +
-      "All weights in grams only. For TM6 steps include settings like [Speed 5 / 100°C / 5 min]." + currentRecipe + "\n" +
+      "All weights in grams only. For Thermomix, steps include settings like [Speed 5 / 100°C / 5 min]." + currentRecipe + "\n" +
       (image ? "The user has uploaded a photo of their fridge/ingredients. Identify what you can see and suggest the best recipe.\n" : "") +
       "\n--- Conversation ---\n" + historyText + "\n--- End ---\n\n" +
       "Reply as Assistant. Respond ONLY with a JSON object:\n" +
@@ -236,7 +236,7 @@ function App() {
         React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 12 } },
           React.createElement("div", { style: { width: 38, height: 38, borderRadius: "50%", background: COPPER, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 } }, "👨‍🍳"),
           React.createElement("div", null,
-            React.createElement("div", { style: { color: "white", fontWeight: 600, fontSize: 16, fontFamily: "Georgia" } }, "TM6 Cookbook"),
+            React.createElement("div", { style: { color: "white", fontWeight: 600, fontSize: 16, fontFamily: "Georgia" } }, "Thermomix Cookbook"),
             React.createElement("div", { style: { color: "#7a6353", fontSize: 11 } }, "Your AI-powered recipe companion")
           )
         ),
