@@ -49,17 +49,11 @@ If not about a recipe, set "recipe" to null.
 ONLY output valid JSON. No backticks. No extra text.`;
 
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      // Now calling OUR Netlify function instead of Anthropic directly
+      const response = await fetch("/.netlify/functions/claude", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": window.ANTHROPIC_API_KEY,
-          "anthropic-version": "2023-06-01",
-          "anthropic-dangerous-direct-browser-access": "true"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 1000,
           messages: [{ role: "user", content: prompt }]
         })
       });
