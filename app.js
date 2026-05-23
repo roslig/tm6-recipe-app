@@ -237,7 +237,7 @@ function App() {
           React.createElement("div", { style: { width: 38, height: 38, borderRadius: "50%", background: COPPER, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 } }, "👨‍🍳"),
           React.createElement("div", null,
             React.createElement("div", { style: { color: "white", fontWeight: 600, fontSize: 16, fontFamily: "Georgia" } }, "Thermomix Cookbook"),
-            React.createElement("div", { style: { color: "#7a6353", fontSize: 11 } }, "Your AI-powered recipe companion")
+            React.createElement("div", { style: { color: "#7a6353", fontSize: 11 } }, "Your personal AI cooking assistant")
           )
         ),
         React.createElement("select", { value: language, onChange: function(e) { handleLanguageChange(e.target.value); },
