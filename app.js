@@ -1,6 +1,6 @@
 const { useState, useRef, useEffect } = React;
 
-const STORAGE_KEY = "tm6-cookbook-v1";
+const STORAGE_KEY = "Thermomix-cookbook-v1";
 const BROWN = "#3d2b1f";
 const COPPER = "#b5651d";
 const CREAM = "#faf6f0";
